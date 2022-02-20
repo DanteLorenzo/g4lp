@@ -44,5 +44,8 @@ export default {
 
     beautify: {
         indent_size: 4
-    }
+    },
+
+    //ZIP
+    zip: 'website.zip'
 }

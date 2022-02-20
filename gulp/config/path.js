@@ -5,6 +5,7 @@ const srcPath = "./src"
 //Paths to Files
 export default {
     root: destPath,
+    zip: destPath + "/**/*.*",
 
     html: {
         src: srcPath + "/html/*.html",

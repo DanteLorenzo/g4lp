@@ -15,7 +15,7 @@ export default {
     },
 
     size: {
-        showFiles: true
+        showFiles: isProd
     },
 
     pug: {

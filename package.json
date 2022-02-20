@@ -44,9 +44,12 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-size": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html-nosvg": "^1.0.5",
-    "sass": "^1.49.8"
+    "sass": "^1.49.8",
+    "webpack": "^5.69.1",
+    "webpack-stream": "^7.0.0"
   }
 }

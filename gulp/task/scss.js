@@ -17,11 +17,11 @@ const scss = () => {
         .pipe($.gp.shorthand())
         .pipe($.gp.groupCssMediaQueries())
         .pipe($.gp.autoprefixer())
-        .pipe($.gp.size($.app.size))
+        .pipe($.gp.if($.app.isProd, $.gp.size($.app.size)))
         .pipe($.gulp.dest($.path.scss.dest, { sourcemaps: $.app.isDev}))
         .pipe($.gp.rename($.app.rename))
         .pipe($.gp.csso())
-        .pipe($.gp.size($.app.size))
+        .pipe($.gp.if($.app.isProd, $.gp.size($.app.size)))
         .pipe($.gulp.dest($.path.scss.dest, { sourcemaps: $.app.isDev}))
         .pipe($.browserSync.stream())
 }

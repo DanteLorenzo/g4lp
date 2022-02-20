@@ -30,6 +30,12 @@ export default {
         dest: destPath + "/css"
     },
 
+    less: {
+        src: srcPath + "/less/*.less",
+        watch: srcPath + "/less/**/*.less",
+        dest: destPath + "/css"
+    },
+
     js: {
         src: srcPath + "/js/*.js",
         watch: srcPath + "/js/**/*.js",

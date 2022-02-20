@@ -22,6 +22,7 @@ import scss from "./gulp/task/scss";
 import js from "./gulp/task/js";
 import img from "./gulp/task/img";
 import font from "./gulp/task/font";
+import less from "./gulp/task/less";
 // import css from "./gulp/task/css";
 // import html from "./gulp/task/html";
 
@@ -32,6 +33,7 @@ const watcher = () => {
     $.gulp.watch($.path.js.watch, js);
     $.gulp.watch($.path.font.watch, font);
     $.gulp.watch($.path.img.watch, img);
+    $.gulp.watch($.path.less.watch, less);
     // $.gulp.watch($.path.html.watch, html);
     // $.gulp.watch($.path.css.watch, css);
 };
@@ -39,7 +41,7 @@ const watcher = () => {
 //Production(without server and watcher) == "gulp --production"
 const build = $.gulp.series(
     clear,
-    $.gulp.parallel( pug, scss, js, font, img)
+    $.gulp.parallel( pug, less, js, font, img)
 );
 
 //For Development == "gulp"

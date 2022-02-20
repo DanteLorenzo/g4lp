@@ -17,14 +17,14 @@ global.$ = {
 //Task Import
 import server from "./gulp/task/server";
 import clear from "./gulp/task/clear";
+import html from "./gulp/task/html";
 import pug from "./gulp/task/pug";
+import css from "./gulp/task/css";
 import scss from "./gulp/task/scss";
+import less from "./gulp/task/less";
 import js from "./gulp/task/js";
 import img from "./gulp/task/img";
 import font from "./gulp/task/font";
-import less from "./gulp/task/less";
-// import css from "./gulp/task/css";
-// import html from "./gulp/task/html";
 
 //Tracks changes in the project
 const watcher = () => {
@@ -41,7 +41,7 @@ const watcher = () => {
 //Production(without server and watcher) == "gulp --production"
 const build = $.gulp.series(
     clear,
-    $.gulp.parallel( pug, less, js, font, img)
+    $.gulp.parallel( pug, scss, js, font, img)
 );
 
 //For Development == "gulp"
@@ -57,9 +57,9 @@ export { scss };
 export { js };
 export { font };
 export { img };
-// export { html };
-// export { css };
-
+export { less };
+export { html };
+export { css };
 
 //Default start "gulp". For production build need "gulp --production"
 export default $.app.isProd ? build : dev;

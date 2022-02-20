@@ -13,6 +13,7 @@ const css = () => {
         .pipe($.gp.shorthand()) //Makes files lighter and more readable
         .pipe($.gp.groupCssMediaQueries()) //Group media queries
         .pipe($.gp.autoprefixer()) //Autoprefix for older browsers
+        .pipe($.gp.if($.app.isDev, $.gp.beautify.css($.app.beautify))) //Make files more readable
         .pipe($.gp.if($.app.isProd, $.gp.size($.app.size))) //Shows file size
         .pipe($.gulp.dest($.path.css.dest, { sourcemaps: $.app.isDev})) //Destination directory 
         .pipe($.gp.rename($.app.rename)) //Rename File

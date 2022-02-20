@@ -9,7 +9,7 @@ const html = () => {
         })) //Pop-up windows on errors
         .pipe($.gp.fileInclude()) //Include html files
         .pipe($.gp.webpHtmlNosvg()) //Replaces the <img> tag with <picture> <source> <img> in HTML files
-        .pipe($.gp.if($.app.isDev, $.gp.htmlBeautify($.app.htmlBeautify))) //Make files more readable
+        .pipe($.gp.if($.app.isDev, $.gp.beautify.html($.app.beautify))) //Make files more readable
         .pipe($.gp.if($.app.isProd, $.gp.size($.app.size))) //Shows file size
         .pipe($.gp.htmlmin($.app.htmlmin)) //HTML minifier
         .pipe($.gp.if($.app.isProd, $.gp.size($.app.size))) //Shows file size

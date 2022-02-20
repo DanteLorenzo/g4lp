@@ -22,6 +22,10 @@ export default {
         pretty: isDev
     },
 
+    rename: {
+        suffix: ".min"
+    },
+
     htmlBeautify: {
         "indent_size": 4,
         "indent_char": " ",

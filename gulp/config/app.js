@@ -31,7 +31,7 @@ export default {
     },
 
     fonter: {
-        formats: ["ttf", "eot", "woff", "woff2", "svg", "otf"]
+        formats: ["ttf", "eot", "woff", "otf"]
     },
 
     htmlBeautify: {

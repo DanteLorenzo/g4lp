@@ -42,8 +42,8 @@ export default {
     },
 
     font: {
-        src: srcPath + "/font/*.{ttf/woff,woff2,otf,svg,ttc,eot}",
-        watch: srcPath + "/font/**/*.{ttf,woff,woff2,otf,svg,ttc,eot}",
+        src: srcPath + "/font/*.{ttf,woff,woff2,otf,svg,ttc,eot,otc}",
+        watch: srcPath + "/font/**/*.{ttf,woff,woff2,otf,svg,ttc,eot,otc}",
         dest: destPath + "/font"
     },
 }

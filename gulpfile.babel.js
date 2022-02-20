@@ -21,6 +21,7 @@ import pug from "./gulp/task/pug";
 import css from "./gulp/task/css";
 import scss from "./gulp/task/scss";
 import js from "./gulp/task/js";
+import font from "./gulp/task/font";
 
 
 const watcher = () => {
@@ -30,12 +31,12 @@ const watcher = () => {
     $.gulp.watch($.path.css.watch, css);
     $.gulp.watch($.path.scss.watch, scss);
     $.gulp.watch($.path.js.watch, js);
-
+    $.gulp.watch($.path.font.watch, font);
 };
 
 const build = $.gulp.series(
     clear,
-    $.gulp.parallel(img, pug, scss, js)
+    $.gulp.parallel(img, pug, scss, js, font)
 );
 
 const dev = $.gulp.series(
@@ -50,6 +51,7 @@ export { pug };
 export { css };
 export { scss };
 export { js };
+export { font };
 
 
 

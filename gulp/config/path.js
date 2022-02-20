@@ -49,6 +49,11 @@ export default {
         dest: destPath + "/js"
     },
 
+    ts: {
+        src: srcPath + "/ts/*.ts",
+        watch: srcPath + "/ts/**/*.ts",
+        dest: destPath + "/js"
+    },
 
     img: {
         src: srcPath + "/img/*.{png,jpg,jpeg,gif,svg}",

@@ -24,6 +24,7 @@ import scss from "./gulp/task/scss";
 import less from "./gulp/task/less";
 import styl from "./gulp/task/styl";
 import js from "./gulp/task/js";
+import ts from "./gulp/task/ts";
 import img from "./gulp/task/img";
 import font from "./gulp/task/font";
 import zip from "./gulp/task/zip";
@@ -36,6 +37,7 @@ const watcher = () => {
     $.gulp.watch($.path.js.watch, js);
     $.gulp.watch($.path.font.watch, font);
     $.gulp.watch($.path.img.watch, img);
+    // $.gulp.watch($.path.ts.watch, ts);
     // $.gulp.watch($.path.styl.watch, styl);
     // $.gulp.watch($.path.less.watch, less);
     // $.gulp.watch($.path.html.watch, html);
@@ -71,6 +73,7 @@ export { scss };
 export { less };
 export { styl };
 export { js };
+export { ts };
 export { font };
 export { img };
 

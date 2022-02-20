@@ -23,6 +23,11 @@ export default {
         mode: isProd ? "production" : "development"
     },
 
+    //TS
+    typescript: {
+        noImplicitAny: true
+    },
+
     //Font
     fonter: {
         formats: ["ttf", "eot", "woff", "otf"]

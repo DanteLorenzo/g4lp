@@ -18,6 +18,10 @@ export default {
         showFiles: true
     },
 
+    pug: {
+        pretty: isDev
+    },
+
     htmlBeautify: {
         "indent_size": 4,
         "indent_char": " ",

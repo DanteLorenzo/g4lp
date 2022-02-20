@@ -17,18 +17,19 @@ import server from "./gulp/task/server";
 import clear from "./gulp/task/clear";
 import html from "./gulp/task/html";
 import img from "./gulp/task/img";
-
+import pug from "./gulp/task/pug";
 
 
 const watcher = () => {
     $.gulp.watch($.path.html.watch, html);
     $.gulp.watch($.path.img.watch, img);
+    $.gulp.watch($.path.pug.watch, pug);
 
 };
 
 const build = $.gulp.series(
     clear,
-    $.gulp.parallel(html, img)
+    $.gulp.parallel(img, pug)
 );
 
 const dev = $.gulp.series(
@@ -39,6 +40,7 @@ const dev = $.gulp.series(
 export { clear };
 export { html };
 export { img };
+export { pug };
 
 
 export default $.app.isProd ? build : dev;

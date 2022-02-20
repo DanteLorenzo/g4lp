@@ -19,6 +19,7 @@ import html from "./gulp/task/html";
 import img from "./gulp/task/img";
 import pug from "./gulp/task/pug";
 import css from "./gulp/task/css";
+import scss from "./gulp/task/scss";
 
 
 const watcher = () => {
@@ -26,12 +27,13 @@ const watcher = () => {
     $.gulp.watch($.path.img.watch, img);
     $.gulp.watch($.path.pug.watch, pug);
     $.gulp.watch($.path.css.watch, css);
+    $.gulp.watch($.path.scss.watch, scss);
 
 };
 
 const build = $.gulp.series(
     clear,
-    $.gulp.parallel(img, pug, css)
+    $.gulp.parallel(img, pug, scss)
 );
 
 const dev = $.gulp.series(
@@ -44,6 +46,7 @@ export { html };
 export { img };
 export { pug };
 export { css };
+export { scss };
 
 
 export default $.app.isProd ? build : dev;

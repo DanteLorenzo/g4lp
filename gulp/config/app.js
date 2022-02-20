@@ -26,6 +26,14 @@ export default {
         suffix: ".min"
     },
 
+    webpack: {
+        mode: isProd ? "production" : "development"
+    },
+
+    fonter: {
+        formats: ["ttf", "eot", "woff", "woff2", "svg", "otf"]
+    },
+
     htmlBeautify: {
         "indent_size": 4,
         "indent_char": " ",

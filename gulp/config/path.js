@@ -37,6 +37,12 @@ export default {
         dest: destPath + "/css"
     },
 
+    styl: {
+        src: srcPath + "/styl/*.styl",
+        watch: srcPath + "/styl/**/*.styl",
+        dest: destPath + "/css"
+    },
+
     js: {
         src: srcPath + "/js/*.js",
         watch: srcPath + "/js/**/*.js",

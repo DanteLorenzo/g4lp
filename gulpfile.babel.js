@@ -22,6 +22,7 @@ import pug from "./gulp/task/pug";
 import css from "./gulp/task/css";
 import scss from "./gulp/task/scss";
 import less from "./gulp/task/less";
+import styl from "./gulp/task/styl";
 import js from "./gulp/task/js";
 import img from "./gulp/task/img";
 import font from "./gulp/task/font";
@@ -35,7 +36,8 @@ const watcher = () => {
     $.gulp.watch($.path.js.watch, js);
     $.gulp.watch($.path.font.watch, font);
     $.gulp.watch($.path.img.watch, img);
-    //$.gulp.watch($.path.less.watch, less);
+    // $.gulp.watch($.path.styl.watch, styl);
+    // $.gulp.watch($.path.less.watch, less);
     // $.gulp.watch($.path.html.watch, html);
     // $.gulp.watch($.path.css.watch, css);
 };
@@ -62,14 +64,17 @@ const dev = $.gulp.series(
 
 //Single exports 
 export { clear };
+export { html };
 export { pug };
+export { css };
 export { scss };
+export { less };
+export { styl };
 export { js };
 export { font };
 export { img };
-export { less };
-export { html };
-export { css };
+
+
 
 //Default start "gulp". For production build need "gulp --production"
 export default $.app.isProd ? prod : dev;

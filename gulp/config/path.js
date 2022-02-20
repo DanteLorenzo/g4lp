@@ -1,6 +1,8 @@
+//Main paths
 const destPath = "./dist"
 const srcPath = "./src"
 
+//Paths to Files
 export default {
     root: destPath,
 

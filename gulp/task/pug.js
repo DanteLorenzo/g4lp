@@ -1,17 +1,17 @@
 //PUG
 const pug = () => {
-    return $.gulp.src($.path.pug.src)
+    return $.gulp.src($.path.pug.src) //Source directory
         .pipe($.gp.plumber({
             errorHandler: $.gp.notify.onError(error => ({
                 title: 'PUG',
                 message: error.message
             }))
-        }))
-        .pipe($.gp.pug($.app.pug))
-        .pipe($.gp.webpHtmlNosvg())
-        .pipe($.gp.if($.app.isDev, $.gp.htmlBeautify()))
-        .pipe($.gulp.dest($.path.pug.dest))
-        .pipe($.browserSync.stream())
+        })) //Pop-up windows on errors
+        .pipe($.gp.pug($.app.pug)) //Compiling Pug templates
+        .pipe($.gp.webpHtmlNosvg()) //Replaces the <img> tag with <picture> <source> <img> in HTML files
+        .pipe($.gp.if($.app.isDev, $.gp.htmlBeautify())) //Make files more readable
+        .pipe($.gulp.dest($.path.pug.dest)) //Destination directory 
+        .pipe($.browserSync.stream()) //Auto-relaod page
 }
 
 export default pug;

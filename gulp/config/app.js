@@ -1,37 +1,40 @@
+//Status Development or Production
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
 
-//Configs
+//Options for plugins
 export default {
+    //Status
     isProd: isProd,
     isDev: isDev,
 
-    htmlmin: {
-        collapseWhitespace: isProd 
-    },
-
+    //IMG
     imagemin: {
         verbose: true
     },
 
-    size: {
-        showFiles: isProd
-    },
-
-    pug: {
-        pretty: isDev
-    },
-
+    //CSS
     rename: {
         suffix: ".min"
     },
 
+    //JS
     webpack: {
         mode: isProd ? "production" : "development"
     },
 
+    //Font
     fonter: {
         formats: ["ttf", "eot", "woff", "otf"]
+    },
+
+    // PUG/HTML
+    pug: {
+        pretty: isDev
+    },
+    
+    htmlmin: {
+        collapseWhitespace: isProd 
     },
 
     htmlBeautify: {
@@ -55,5 +58,10 @@ export default {
         "wrap_attributes": "auto",
         "wrap_attributes_indent_size": 4,
         "end_with_newline": false
+    },
+    
+    //General
+    size: {
+        showFiles: isProd
     }
 }

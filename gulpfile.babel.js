@@ -16,16 +16,19 @@ global.$ = {
 import server from "./gulp/task/server";
 import clear from "./gulp/task/clear";
 import html from "./gulp/task/html";
+import img from "./gulp/task/img";
 
 
 
 const watcher = () => {
     $.gulp.watch($.path.html.watch, html);
+    $.gulp.watch($.path.img.watch, img);
+
 };
 
 const build = $.gulp.series(
     clear,
-    html
+    $.gulp.parallel(html, img)
 );
 
 const dev = $.gulp.series(
@@ -35,5 +38,7 @@ const dev = $.gulp.series(
 
 export { clear };
 export { html };
+export { img };
 
-export default dev;
+
+export default $.app.isProd ? build : dev;

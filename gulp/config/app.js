@@ -10,6 +10,10 @@ export default {
         collapseWhitespace: isProd 
     },
 
+    imagemin: {
+        verbose: true
+    },
+
     size: {
         showFiles: true
     },

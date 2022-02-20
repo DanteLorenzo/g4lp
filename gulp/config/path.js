@@ -23,8 +23,8 @@ export default {
     },
 
     scss: {
-        src: srcPath + "/scss/*.{scss, sass}",
-        watch: srcPath + "/scss/**/*.{scss, sass}",
+        src: srcPath + "/scss/*.{scss,sass}",
+        watch: srcPath + "/scss/**/*.{scss,sass}",
         dest: destPath + "/css"
     },
 
@@ -34,15 +34,16 @@ export default {
         dest: destPath + "/js"
     },
 
+
     img: {
-        src: srcPath + "/img/*.{jpeg, png, jpg, svg, gif}",
-        watch: srcPath + "/img/**/*.{jpeg, png, jpg, svg, gif}",
+        src: srcPath + "/img/*.{png,jpg,jpeg,gif,svg}",
+        watch: srcPath + "/img/**/*.{png,jpg,jpeg,gif,svg}",
         dest: destPath + "/img"
     },
 
     font: {
-        src: srcPath + "/font/*.{ttf, woff, woff2, otf, svg, ttc, eot}",
-        watch: srcPath + "/font/**/*.{ttf, woff, woff2, otf, svg, ttc, eot}",
+        src: srcPath + "/font/*.{ttf/woff,woff2,otf,svg,ttc,eot}",
+        watch: srcPath + "/font/**/*.{ttf,woff,woff2,otf,svg,ttc,eot}",
         dest: destPath + "/font"
     },
 }

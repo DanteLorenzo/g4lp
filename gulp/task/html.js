@@ -1,12 +1,6 @@
 //HTML
 const html = () => {
     return $.gulp.src($.path.html.src) //Source directory
-        .pipe($.gp.plumber({
-            errorHandler: $.gp.notify.onError(error => ({
-                title: 'HTML',
-                message: error.message
-            }))
-        })) //Pop-up windows on errors
         .pipe($.gp.fileInclude()) //Include html files
         .pipe($.gp.webpHtmlNosvg()) //Replaces the <img> tag with <picture> <source> <img> in HTML files
         .pipe($.gp.if($.app.isDev, $.gp.beautify.html($.app.beautify))) //Make files more readable

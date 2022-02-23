@@ -1,12 +1,6 @@
 //Stylus
 const styl = () => {
     return $.gulp.src($.path.styl.src, { sourcemaps: $.app.isDev}) //Source directory
-        .pipe($.gp.plumber({
-            errorHandler: $.gp.notify.onError(error => ({
-                title: 'Stylus',
-                message: error.message
-            }))
-        })) //Pop-up windows on errors
         .pipe($.gp.stylus()) ////Compiling Stylus
         .pipe($.gp.concat('style.css')) //Concatenates files
         .pipe($.gp.cssimport()) //Finds imports, grabs the content of the linked file and replaces the import statement with it

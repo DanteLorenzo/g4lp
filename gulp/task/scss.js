@@ -3,12 +3,6 @@ const sass = require('gulp-sass')(require('sass'));
 //SCSS
 const scss = () => {
     return $.gulp.src($.path.scss.src, { sourcemaps: $.app.isDev}) //Source directory
-        .pipe($.gp.plumber({
-            errorHandler: $.gp.notify.onError(error => ({
-                title: 'SCSS',
-                message: error.message
-            }))
-        })) //Pop-up windows on errors
         .pipe($.gp.sassGlob())
         .pipe(sass()) //Compiling SASS/SCSS 
         .pipe($.gp.concat('style.css')) //Concatenates files
@@ -18,7 +12,6 @@ const scss = () => {
         .pipe($.gp.groupCssMediaQueries()) //Group media queries
         .pipe($.gp.autoprefixer()) //Autoprefix for older browsers
         .pipe($.gp.if($.app.isDev, $.gp.beautify.css($.app.beautify))) //Make files more readable
-
         .pipe($.gp.if($.app.isProd, $.gp.size($.app.size))) //Shows file size
         .pipe($.gulp.dest($.path.scss.dest, { sourcemaps: $.app.isDev})) //Destination directory 
         .pipe($.gp.rename($.app.rename)) //Rename File

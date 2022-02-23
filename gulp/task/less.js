@@ -1,12 +1,6 @@
 //LESS
 const less = () => {
     return $.gulp.src($.path.less.src, { sourcemaps: $.app.isDev}) //Source directory
-        .pipe($.gp.plumber({
-            errorHandler: $.gp.notify.onError(error => ({
-                title: 'LESS',
-                message: error.message
-            }))
-        })) //Pop-up windows on errors
         .pipe($.gp.less()) ////Compiling LESS
         .pipe($.gp.concat('style.css')) //Concatenates files
         .pipe($.gp.cssimport()) //Finds imports, grabs the content of the linked file and replaces the import statement with it

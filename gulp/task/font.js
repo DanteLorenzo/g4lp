@@ -1,12 +1,6 @@
 //Font
 const font = () => {
     return $.gulp.src($.path.font.src) //Source directory
-        .pipe($.gp.plumber({
-            errorHandler: $.gp.notify.onError(error => ({
-                title: 'Font',
-                message: error.message
-            }))
-        })) //Pop-up windows on errors
         .pipe($.gp.newer($.path.font.dest)) //Passing through only those source files that are newer than corresponding destination files
         .pipe($.gp.fonter($.app.fonter)) //Font subsetting and converting
         .pipe($.gulp.dest($.path.font.dest)) //Destination directory 

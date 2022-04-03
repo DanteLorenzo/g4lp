@@ -1,6 +1,7 @@
 //Main paths
 const destPath = "./dist"
 const srcPath = "./src"
+const nodeModules = "node_modules"
 
 //Paths to Files
 export default {
@@ -34,13 +35,8 @@ export default {
     js: {
         src: srcPath + "/js/*.js",
         watch: srcPath + "/js/**/*.js",
-        dest: destPath + "/js"
-    },
-
-    ts: {
-        src: srcPath + "/ts/*.ts",
-        watch: srcPath + "/ts/**/*.ts",
-        dest: destPath + "/js"
+        dest: destPath + "/js",
+        jquery: nodeModules + "/jquery/dist/jquery.js"
     },
 
     img: {

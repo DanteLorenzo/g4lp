@@ -22,7 +22,6 @@ import pug from "./gulp/task/pug";
 import css from "./gulp/task/css";
 import scss from "./gulp/task/scss";
 import js from "./gulp/task/js";
-import ts from "./gulp/task/ts";
 import img from "./gulp/task/img";
 import font from "./gulp/task/font";
 import zip from "./gulp/task/zip";
@@ -35,7 +34,6 @@ const watcher = () => {
     $.gulp.watch($.path.js.watch, js);
     $.gulp.watch($.path.font.watch, font);
     $.gulp.watch($.path.img.watch, img);
-    // $.gulp.watch($.path.ts.watch, ts);
     // $.gulp.watch($.path.html.watch, html);
     // $.gulp.watch($.path.css.watch, css);
 };
@@ -67,7 +65,6 @@ export { pug };
 export { css };
 export { scss };
 export { js };
-export { ts };
 export { font };
 export { img };
 

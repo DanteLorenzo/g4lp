@@ -36,7 +36,10 @@ export default {
         src: srcPath + "/js/*.js",
         watch: srcPath + "/js/**/*.js",
         dest: destPath + "/js",
-        jquery: nodeModules + "/jquery/dist/jquery.js"
+        jquery: nodeModules + "/jquery/dist/jquery.js",
+        slick_carousel: nodeModules + "/slick-carousel/slick/slick.js",
+        mixitup: nodeModules + "/mixitup/dist/mixitup.js",
+        fancybox: nodeModules + "/@fancyapps/ui/dist/fancybox.umd.js"
     },
 
     img: {

@@ -3,6 +3,9 @@ import webpack from "webpack-stream"
 const js = () => {
     return $.gulp.src([
         $.path.js.jquery,
+        $.path.js.slick_carousel,
+        $.path.js.mixitup,
+        $.path.js.fancybox,
         $.path.js.src], { sourcemaps: $.app.isDev }) //Source directory
         .pipe($.gp.babel()) //Use next generation JavaScript
         //.pipe(webpack($.app.webpack)) //Run webpack as a stream

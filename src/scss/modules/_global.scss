@@ -22,6 +22,15 @@ body {
   padding: 0 15px;
 }
 
+//fancybox
+@function max($numbers...) {
+    @return m#{a}x (#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n (#{$numbers});
+}
+
 
 
 

@@ -6,7 +6,7 @@ const img = () => {
         .pipe($.gulp.dest($.path.img.dest)) //Destination directory 
         .pipe($.gulp.src($.path.img.src)) //Source directory
         .pipe($.gp.newer($.path.img.dest)) //Passing through only those source files that are newer than corresponding destination files
-        .pipe($.gp.imagemin($.app.imagemin)) //IMG minifier
+        .pipe($.gp.if($.app.isProd, $.gp.imagemin($.app.imagemin))) //IMG minifier
         .pipe($.gulp.dest($.path.img.dest)) //Destination directory 
         .pipe($.browserSync.stream()) //Auto-relaod page
 }

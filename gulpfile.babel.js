@@ -34,7 +34,7 @@ const watcher = () => {
     $.gulp.watch($.path.js.watch, js);
     $.gulp.watch($.path.font.watch, font);
     $.gulp.watch($.path.img.watch, img);
-    // $.gulp.watch($.path.html.watch, html);
+    //$.gulp.watch($.path.html.watch, html);
     // $.gulp.watch($.path.css.watch, css);
 };
 

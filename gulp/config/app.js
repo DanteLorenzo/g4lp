@@ -13,11 +13,6 @@ export default {
         verbose: true
     },
 
-    //CSS
-    rename: {
-        suffix: ".min"
-    },
-
     //JS
     webpack: {
         mode: isProd ? "production" : "development"
@@ -40,6 +35,10 @@ export default {
     //General
     size: {
         showFiles: isProd
+    },
+
+    rename: {
+        suffix: ".min"
     },
 
     beautify: {

@@ -31,18 +31,6 @@ export default {
         dest: destPath + "/css"
     },
 
-    less: {
-        src: srcPath + "/less/*.less",
-        watch: srcPath + "/less/**/*.less",
-        dest: destPath + "/css"
-    },
-
-    styl: {
-        src: srcPath + "/styl/*.styl",
-        watch: srcPath + "/styl/**/*.styl",
-        dest: destPath + "/css"
-    },
-
     js: {
         src: srcPath + "/js/*.js",
         watch: srcPath + "/js/**/*.js",
@@ -56,7 +44,7 @@ export default {
     },
 
     img: {
-        src: srcPath + "/img/*.{png,jpg,jpeg,gif,svg}",
+        src: srcPath + "/img/**/*.{png,jpg,jpeg,gif,svg}",
         watch: srcPath + "/img/**/*.{png,jpg,jpeg,gif,svg}",
         dest: destPath + "/img"
     },
